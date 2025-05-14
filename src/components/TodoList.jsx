@@ -1,19 +1,14 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-export default function TodoList({ meals, amounts, onAmountChange, onAdd }) {
+function TodoList({ todos, onDelete }) {
   return (
-    <div className="meal-list">
-      {meals.map((meal) => (
-        <TodoItem
-          key={meal.id}
-          meal={meal}
-          amount={amounts[meal.id] || 1}
-          onAmountChange={onAmountChange}
-          onAdd={onAdd}
-        />
+    <ul className="todo-list">
+      {todos.map((todo) => (
+        <TodoItem key={todo.id} todo={todo} onDelete={onDelete} />
       ))}
-    </div>
+    </ul>
   );
 }
 
+export default TodoList;

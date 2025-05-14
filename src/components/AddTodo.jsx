@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function AddTodo({ meal, amount, onAmountChange, onAdd }) {
+function AddTodo({ onAdd }) {
+  const [title, setTitle] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (title.trim() === "") return;
+    onAdd({ title });
+    setTitle("");
+  }
+
   return (
-    <div className="actions">
+    <form className="add-todo" onSubmit={handleSubmit}>
       <input
-        type="number"
-        min="1"
-        value={amount}
-        onChange={(e) => onAmountChange(meal.id, e.target.value)}
+        type="text"
+        placeholder="Enter task"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
-      <button onClick={() => onAdd(meal)}>+ Add</button>
-    </div>
+      <button type="submit">Add</button>
+    </form>
   );
 }
 
-
+export default AddTodo;
