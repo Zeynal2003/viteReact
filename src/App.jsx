@@ -3,8 +3,8 @@ import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
 import EditTask from "./components/EditTask";
 import "./styles.css";
-function App() {
 
+function App() {
   return (
     <Router>
       <Routes>

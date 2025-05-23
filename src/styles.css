@@ -1,8 +1,3 @@
-.header {
-  position: relative;
-  padding: 2px;
-}
-
 .add-task-btn {
   position: absolute;
   top: 25px;
@@ -99,9 +94,9 @@ small {
   margin-bottom: 20px;
   max-width: 350px;
   min-height: 220px;
-  font-size: 14px;
+  font-size: 17px;
 }
-
+ 
 .todo-item h3 {
   margin-bottom: 10px;
   font-size: 18px;
@@ -204,4 +199,33 @@ small {
 }
 .btn-save:hover {
   background-color: #2563EB;
+}
+
+.header {
+  position: relative;
+  padding: 20px 20px;
+  background-color: #3b82f6;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
+}
+
+ .filters-container {
+  max-width: 600px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  margin: 20px 0 20px 0;
+  padding-left: 0;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
 }
