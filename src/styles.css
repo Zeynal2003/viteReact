@@ -72,6 +72,16 @@ body {
   font-size: 28px;
 }
 
+.card .info h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card .info p {
+  margin: 5px 0 0 0;
+  color: gray;
+}
+
 .chart-placeholder {
   margin-top: 30px;
   height: 200px;
@@ -81,4 +91,13 @@ body {
   align-items: center;
   justify-content: center;
   color: #888;
+}
+
+.chart-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  height: 250px;
 }
